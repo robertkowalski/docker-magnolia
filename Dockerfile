@@ -54,6 +54,9 @@ RUN mkdir -p /var/log/supervisor
 
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
+# adjust file limits
+RUN echo "magnolia   hard     nofile          500000" >> /etc/security/limits.conf
+
 WORKDIR /opt/magnolia
 EXPOSE 8080
 VOLUME ["/opt/magnolia/light-modules"]
