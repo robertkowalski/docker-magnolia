@@ -39,7 +39,7 @@ RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 
 # install mgnl
-RUN npm i -g mgnl
+RUN npm i -g @magnolia/cli
 
 # setup directories and permissions
 RUN mkdir -p /opt/magnolia /opt/magnolia/light-modules \
